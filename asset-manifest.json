@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/shopwithstyle/static/css/main.b3654b24.css",
-    "main.js": "/shopwithstyle/static/js/main.ccf34259.js",
-    "static/js/787.8943fe48.chunk.js": "/shopwithstyle/static/js/787.8943fe48.chunk.js",
-    "static/media/bg_shoes.gif": "/shopwithstyle/static/media/bg_shoes.3694ca1216bdd577c987.gif",
-    "static/media/google_logo.png": "/shopwithstyle/static/media/google_logo.6bc7d49355c4e25579a0.png",
-    "static/media/shopping-cart.svg": "/shopwithstyle/static/media/shopping-cart.966279421fd54109d8d172efe3af1879.svg",
-    "index.html": "/shopwithstyle/index.html",
-    "main.b3654b24.css.map": "/shopwithstyle/static/css/main.b3654b24.css.map",
-    "main.ccf34259.js.map": "/shopwithstyle/static/js/main.ccf34259.js.map",
-    "787.8943fe48.chunk.js.map": "/shopwithstyle/static/js/787.8943fe48.chunk.js.map"
+    "main.css": "/static/css/main.3f5423e3.css",
+    "main.js": "/static/js/main.40c9927b.js",
+    "static/js/787.8943fe48.chunk.js": "/static/js/787.8943fe48.chunk.js",
+    "static/media/bg_shoes.gif": "/static/media/bg_shoes.3694ca1216bdd577c987.gif",
+    "static/media/google_logo.png": "/static/media/google_logo.6bc7d49355c4e25579a0.png",
+    "static/media/shopping-cart.svg": "/static/media/shopping-cart.966279421fd54109d8d172efe3af1879.svg",
+    "index.html": "/index.html",
+    "main.3f5423e3.css.map": "/static/css/main.3f5423e3.css.map",
+    "main.40c9927b.js.map": "/static/js/main.40c9927b.js.map",
+    "787.8943fe48.chunk.js.map": "/static/js/787.8943fe48.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3654b24.css",
-    "static/js/main.ccf34259.js"
+    "static/css/main.3f5423e3.css",
+    "static/js/main.40c9927b.js"
   ]
 }
