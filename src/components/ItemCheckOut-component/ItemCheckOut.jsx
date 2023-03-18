@@ -35,7 +35,7 @@ function ItemCheckOut() {
           <h1>Your shopping cart is empty</h1>
           <p
             onClick={() => {
-              NavigateToCollections("/collections");
+              NavigateToCollections("/shopwithstyle/collections");
             }}
           >
             ..continue shopping

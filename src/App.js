@@ -13,9 +13,9 @@ function App() {
     <Routes>
       <Route path="/shopwithstyle" element={<Navigation />}>
         <Route index={true} element={<HeroBanner />} />
-        <Route path="authentication" element={<Authentication />} />
+        <Route path="/shopwithstyle/authentication" element={<Authentication />} />
         <Route path="collections/*" element={<Shop />} />
-        <Route path={`collectons/productview`} element={<ProductOverView />} />
+        <Route path={`/shopwithstyle/collectons/productview`} element={<ProductOverView />} />
         <Route path={`checkout-items`} element={<ItemCheckOut />} />
       </Route>
     </Routes>

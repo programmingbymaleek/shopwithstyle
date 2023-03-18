@@ -14,7 +14,7 @@ function CollectionCard({ products }) {
   const overView = () => {
     setProductToView({ ...products, quantity: 1 });
 
-    Navigate("/collectons/productview");
+    Navigate("/shopwithstyle/collectons/productview");
   };
 
   return (

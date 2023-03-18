@@ -12,7 +12,7 @@ function CartDropDown() {
   const navigate = useNavigate();
 
   const gotoCheckoutPage = () => {
-    navigate("/checkout-items");
+    navigate("/shopwithstyle/checkout-items");
   };
 
   return (

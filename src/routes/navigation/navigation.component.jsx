@@ -34,7 +34,7 @@ function Navigation() {
         <Container>
           <Navbar.Brand
             onClick={() => {
-              Navigate("/");
+              Navigate("/shopwithstyle");
             }}
           >
             <div className="logoContainer">
@@ -48,7 +48,7 @@ function Navigation() {
             <Nav>
               <Nav.Link
                 onClick={() => {
-                  Navigate("/collections");
+                  Navigate("/shopwithstyle/collections");
                 }}
               >
                 Collections
@@ -58,7 +58,7 @@ function Navigation() {
                   className="custom-nav-links"
                   style={{ color: "blue" }}
                   onClick={() => {
-                    Navigate("../collections/men");
+                    Navigate("../shopwithstyle/collections/men");
                   }}
                 >
                   Men's Shoes
@@ -66,7 +66,7 @@ function Navigation() {
                 <Nav.Link
                   className="custom-nav-links"
                   onClick={() => {
-                    Navigate("../collections/women");
+                    Navigate("../shopwithstyle/collections/women");
                   }}
                 >
                   Women's Shoes
@@ -74,7 +74,7 @@ function Navigation() {
                 <Nav.Link
                   className="custom-nav-links"
                   onClick={() => {
-                    Navigate("../collections/kids");
+                    Navigate("../shopwithstyle/collections/kids");
                   }}
                 >
                   Kid's Shoes
@@ -91,7 +91,7 @@ function Navigation() {
               ) : (
                 <Nav.Link
                   onClick={() => {
-                    Navigate("/authentication");
+                    Navigate("/shopwithstyle/authentication");
                   }}
                 >
                   Sign In
