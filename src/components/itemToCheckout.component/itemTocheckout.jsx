@@ -2,7 +2,8 @@ import React from "react";
 import { useContext } from "react";
 import { CreateCartContext } from "../../contexts/cart.context";
 import { ProductQuickViewContext } from "../../contexts/product-quick-view-context";
-
+import { MdDeleteForever } from "react-icons/md"
+import { GrFormAdd, GrFormSubtract } from "react-icons/gr"
 import styled from "styled-components";
 import CartItem from "../cart-items/cart-items";
 
@@ -42,15 +43,15 @@ function ItemToCheckOut({ item }) {
               decrementCheckoutItem(item);
             }}
           >
-            -
+            <GrFormSubtract className="icons" />
           </span>
-          {quantity}{" "}
+          <span className="itemQ">{quantity}</span>
           <span
             onClick={() => {
               incrementCheckOutItem(id);
             }}
           >
-            +
+            <GrFormAdd className="icons" />
           </span>
         </div>
         <div className="price phidden">{price}</div>
@@ -62,7 +63,7 @@ function ItemToCheckOut({ item }) {
               deleteCartItem(item);
             }}
           >
-            X
+            <MdDeleteForever className="icons" />
           </span>
         </div>
       </div>
@@ -110,6 +111,15 @@ function ItemToCheckOut({ item }) {
 export default ItemToCheckOut;
 
 const ProductCheckOutContainer = styled.div`
+.itemQ{
+  padding:0 1rem;
+}
+.icons{
+  font-size:1.5rem; 
+  :hover{
+    cursor:pointer; 
+  }
+}
   .description1 {
     display: none;
   }
@@ -140,7 +150,7 @@ const ProductCheckOutContainer = styled.div`
     }
     .product-quanity {
       flex-grow: 1;
-      margin-left: 3rem;
+      margin-left: 1rem;
     }
     .price {
       flex-grow: 1;

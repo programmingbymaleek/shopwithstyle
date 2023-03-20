@@ -43,7 +43,7 @@ function ProductOverView() {
   if (!productToView.shoe_id) {
     return (
       <div>
-        <button onClick={goBackToCollections}>Go to collections</button>
+
       </div>
     );
   }

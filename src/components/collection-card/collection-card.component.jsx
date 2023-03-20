@@ -46,9 +46,11 @@ const CollectionsContainer = styled.div`
   align-items: center;
   position: relative;
 
-  image_wrapper {
-    max-width: 20rem;
-    height: 20rem;
+  .image_wrapper {
+   img{
+    border-radius: 1rem;  
+   }
+ 
   }
 
   img {

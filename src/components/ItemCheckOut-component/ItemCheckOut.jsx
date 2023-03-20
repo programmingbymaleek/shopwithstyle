@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Paymentpal from "../PaypalPayment/Paymentpal";
 function ItemCheckOut() {
   const { cartItems, total } = useContext(CreateCartContext);
 
@@ -48,8 +49,9 @@ function ItemCheckOut() {
               <h1>Shopping Cart</h1>
             </div>
             <div className="checkout-options">
-              <div className="paypal">PayPal</div>
-              <div className="checkout">checkout</div>
+              {/* <div className="paypal">PayPal</div>
+              <div className="checkout">checkout</div> */}
+              <Paymentpal />
             </div>
           </div>
           <div className="product-header">
@@ -106,7 +108,6 @@ function ItemCheckOut() {
               </div>
               <hr />
               <div>
-                {" "}
                 <div className="order-total b-bold">Order Total</div>
                 <div className="order-amount">${total}</div>
               </div>
@@ -206,10 +207,10 @@ const CheckoutContainer = styled.div`
   }
 
   .checkout-options {
-    max-width: 100%;
-    display: flex;
-    justify-content: end;
-    gap: 0.5rem;
+    // max-width: 100%;
+    // display: flex;
+    // justify-content: end;
+    // gap: 0.5rem;
   }
   .checkout-options > * {
     flex-basis: 10rem;
