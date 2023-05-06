@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/shopwithstyle/static/css/main.b3654b24.css",
-    "main.js": "/shopwithstyle/static/js/main.51cd2ad6.js",
+    "main.js": "/shopwithstyle/static/js/main.0f78b045.js",
     "static/js/787.8943fe48.chunk.js": "/shopwithstyle/static/js/787.8943fe48.chunk.js",
     "static/media/bg_shoes.gif": "/shopwithstyle/static/media/bg_shoes.3694ca1216bdd577c987.gif",
     "static/media/google_logo.png": "/shopwithstyle/static/media/google_logo.6bc7d49355c4e25579a0.png",
     "static/media/shopping-cart.svg": "/shopwithstyle/static/media/shopping-cart.966279421fd54109d8d172efe3af1879.svg",
     "index.html": "/shopwithstyle/index.html",
     "main.b3654b24.css.map": "/shopwithstyle/static/css/main.b3654b24.css.map",
-    "main.51cd2ad6.js.map": "/shopwithstyle/static/js/main.51cd2ad6.js.map",
+    "main.0f78b045.js.map": "/shopwithstyle/static/js/main.0f78b045.js.map",
     "787.8943fe48.chunk.js.map": "/shopwithstyle/static/js/787.8943fe48.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3654b24.css",
-    "static/js/main.51cd2ad6.js"
+    "static/js/main.0f78b045.js"
   ]
 }
