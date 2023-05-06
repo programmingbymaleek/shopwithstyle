@@ -6,16 +6,16 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useContext } from "react";
-import { User_Context } from "../../contexts/user.context.component";
 import { SignOutUser } from "../../utils/firebase/firebase.utils";
 import { ReactComponent as CartIcon } from "../../assests/shopping-cart.svg";
 import CartDropDown from "../../components/cart-dropdown.component/cart-dropdown";
 import { CreateCartContext } from "../../contexts/cart.context";
 import Logo from "../../assests/wilmatech_logo_1.png";
+import { useSelector } from "react-redux";
 
 function Navigation() {
   const Navigate = useNavigate();
-  const { currentUser } = useContext(User_Context);
+  const currentUser = useSelector((state) => state.user.currentUser);
   const { toggleCart, setToggleCart, cartCount } =
     useContext(CreateCartContext);
 

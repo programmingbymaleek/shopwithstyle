@@ -1,15 +1,14 @@
 import React from "react";
 import FormInput from "../form-input-component/form-input";
 import CustomButton from "../button.component/button.component";
-import { useState, useContext } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import googleLogo from "../../assests/google_logo.png";
 import {
   signInWithGooglePopup,
   signUserInWithEmailAndPassword,
-  createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
-import { User_Context } from "../../contexts/user.context.component";
+
 
 function SigInForm() {
   const LogGoogleUsersIn = async () => {

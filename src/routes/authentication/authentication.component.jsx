@@ -2,11 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import SigInForm from "../../components/sign-in-form-component/sign-in-form";
 import SignUpForm from "../../components/sign-up-form-component/sign-up.component";
-import { useContext } from "react";
-import { User_Context } from "../../contexts/user.context.component";
 import UserProfile from "../../components/userprofile.component.jsx/user.profile";
+import { useSelector } from "react-redux";
 function Authentication() {
-  const { currentUser } = useContext(User_Context);
+  const currentUser = useSelector((state) => state.user.currentUser);
   return (
     <div>
       {currentUser ? (

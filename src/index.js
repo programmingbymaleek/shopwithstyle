@@ -5,16 +5,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { User_Context_Provider } from "./contexts/user.context.component";
 import { Product_context_Provider } from "./contexts/product.context.component";
 import { ProductQuickViewProvider } from "./contexts/product-quick-view-context";
 import { CartContextProvider } from "./contexts/cart.context";
+import { Provider } from "react-redux";
+import store from "./reduxtk/storeApp/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <User_Context_Provider>
+      <Provider store={store}>
         <Product_context_Provider>
           <ProductQuickViewProvider>
             <CartContextProvider>
@@ -22,7 +23,7 @@ root.render(
             </CartContextProvider>
           </ProductQuickViewProvider>
         </Product_context_Provider>
-      </User_Context_Provider>
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );
