@@ -11,10 +11,20 @@ import Shop from "./components/shop/shop.componet";
 import { createUserDocumentFromAuth, onAuthStateChangedListener } from "./utils/firebase/firebase.utils";
 import { useDispatch } from "react-redux";
 import { setCurrentUser } from "./reduxtk/features/user/userSlice";
+import { getCollectionsAndDocumentFromFireBase } from "./utils/firebase/firebase.utils";
+import { setProducts } from "./reduxtk/features/products/product.slice";
+
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
+    //getting shoe collections from fire base 
+    const getShoeGroups = async () => {
+      const groupMaps = await getCollectionsAndDocumentFromFireBase();
+      dispatch(setProducts(groupMaps))
+    };
+    getShoeGroups();
+    //getting signed in user 
     const unsubscribe = onAuthStateChangedListener((user) => {
       if (user) {
         createUserDocumentFromAuth(user);
@@ -23,7 +33,6 @@ function App() {
     });
     return unsubscribe;
   }, []);
-
   return (
     <Routes>
       <Route path="/shopwithstyle" element={<Navigation />}>

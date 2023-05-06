@@ -1,14 +1,11 @@
 import React from "react";
-import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import { Product_Context } from "../../contexts/product.context.component";
 import CollectionCard from "../collection-card/collection-card.component";
 import styled from "styled-components";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 function Collections() {
-  const { productCollections } = useContext(Product_Context);
-  console.log("From collection componet..");
+  const productCollections = useSelector((state) => state.products.products)
+
 
   return (
     <Collections_Cards className="container">

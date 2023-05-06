@@ -5,18 +5,21 @@ import { ProductQuickViewContext } from "../../contexts/product-quick-view-conte
 import styled from "styled-components";
 import CustomButton from "../button.component/button.component";
 import MenSize from "../../shoe-sizes-data.json";
+import { addItemsTocart } from "../../reduxtk/features/cart/cartSlice";
+import { useDispatch } from "react-redux";
 
 import { useState } from "react";
-import { act } from "react-dom/test-utils";
-import { CreateCartContext } from "../../contexts/cart.context";
+// import { act } from "react-dom/test-utils";
+// import { CreateCartContext } from "../../contexts/cart.context";
 
 function ProductOverView() {
+  const dispatch = useDispatch()
   const [error, setError] = useState("");
   const [shoeSize, setShoeSize] = useState("");
   const { productToView, incrementItem, decrementItem } = useContext(
     ProductQuickViewContext
   );
-  const { addItemToCart } = useContext(CreateCartContext);
+  // const { addItemToCart } = useContext(CreateCartContext);
 
   const isnowClicked = (e) => {
     const setSize = e.target.value;
@@ -36,7 +39,7 @@ function ProductOverView() {
       setError("Please select a size");
       return;
     }
-    addItemToCart(productToView);
+    dispatch(addItemsTocart(productToView))
     // Navigate("/checkout-items");
   };
 

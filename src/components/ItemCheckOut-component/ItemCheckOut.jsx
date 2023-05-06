@@ -1,15 +1,15 @@
-import React, { Fragment } from "react";
-import { useContext } from "react";
-import { CreateCartContext } from "../../contexts/cart.context";
+import React from "react";
+import { useSelector } from "react-redux";
 import ItemToCheckOut from "../itemToCheckout.component/itemTocheckout";
+
+
 import styled from "styled-components";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Paymentpal from "../PaypalPayment/Paymentpal";
 function ItemCheckOut() {
-  const { cartItems, total } = useContext(CreateCartContext);
-
+  const { cartItems, total } = useSelector((state) => state.cart)
   const NavigateToCollections = useNavigate();
 
   const coupon = () => {

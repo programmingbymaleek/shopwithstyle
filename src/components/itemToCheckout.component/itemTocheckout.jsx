@@ -1,21 +1,15 @@
 import React from "react";
-import { useContext } from "react";
-import { CreateCartContext } from "../../contexts/cart.context";
-import { ProductQuickViewContext } from "../../contexts/product-quick-view-context";
+// import { useContext } from "react";
+// import { CreateCartContext } from "../../contexts/cart.context";
 import { MdDeleteForever } from "react-icons/md"
 import { GrFormAdd, GrFormSubtract } from "react-icons/gr"
 import styled from "styled-components";
-import CartItem from "../cart-items/cart-items";
+import { useDispatch } from "react-redux";
+import { deletCartItem, incrementCartItem, decrementCartItem, addItemsTocart } from "../../reduxtk/features/cart/cartSlice";
 
 function ItemToCheckOut({ item }) {
+  const dispatch = useDispatch()
   const { name, imageUrl, quantity, price, id, size } = item;
-
-  const {
-    total,
-    deleteCartItem,
-    incrementCheckOutItem,
-    decrementCheckoutItem,
-  } = useContext(CreateCartContext);
   return (
     <ProductCheckOutContainer>
       <div className="main-product">
@@ -40,7 +34,7 @@ function ItemToCheckOut({ item }) {
         <div className="product-quanity phidden">
           <span
             onClick={() => {
-              decrementCheckoutItem(item);
+              dispatch(decrementCartItem(item));
             }}
           >
             <GrFormSubtract className="icons" />
@@ -48,7 +42,7 @@ function ItemToCheckOut({ item }) {
           <span className="itemQ">{quantity}</span>
           <span
             onClick={() => {
-              incrementCheckOutItem(id);
+              dispatch(incrementCartItem(id));
             }}
           >
             <GrFormAdd className="icons" />
@@ -60,7 +54,7 @@ function ItemToCheckOut({ item }) {
           <span
             style={{ marginLeft: "3rem" }}
             onClick={() => {
-              deleteCartItem(item);
+              dispatch(deletCartItem(item));
             }}
           >
             <MdDeleteForever className="icons" />

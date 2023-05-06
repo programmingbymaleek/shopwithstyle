@@ -1,26 +1,29 @@
-import React, { Fragment } from "react";
-import { json, Link, Outlet, useNavigate } from "react-router-dom";
+import React from "react";
+import { Outlet, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { useContext } from "react";
+// import { useContext } from "react";
 import { SignOutUser } from "../../utils/firebase/firebase.utils";
 import { ReactComponent as CartIcon } from "../../assests/shopping-cart.svg";
 import CartDropDown from "../../components/cart-dropdown.component/cart-dropdown";
-import { CreateCartContext } from "../../contexts/cart.context";
+// import { CreateCartContext } from "../../contexts/cart.context";
 import Logo from "../../assests/wilmatech_logo_1.png";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setToogleCart, } from "../../reduxtk/features/cart/cartSlice";
+
 
 function Navigation() {
+  const dispatch = useDispatch();
+  const { toggleCart, count } = useSelector((state) => state.cart);
   const Navigate = useNavigate();
   const currentUser = useSelector((state) => state.user.currentUser);
-  const { toggleCart, setToggleCart, cartCount } =
-    useContext(CreateCartContext);
 
   const toggleCartContainer = () => {
-    setToggleCart(!toggleCart);
+
+    dispatch(setToogleCart(!toggleCart))
   };
   return (
     <NavigationContainer>
@@ -104,8 +107,8 @@ function Navigation() {
                     className="shopping-icon"
                     onClick={toggleCartContainer}
                   />
-                  {cartCount > 0 ? (
-                    <span className="item-count">{cartCount}</span>
+                  {count > 0 ? (
+                    <span className="item-count">{count}</span>
                   ) : (
                     ""
                   )}

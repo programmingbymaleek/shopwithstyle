@@ -1,17 +1,18 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import CollectionCard from "../collection-card/collection-card.component";
 
-import { Product_Context } from "../../contexts/product.context.component";
+import { useSelector } from "react-redux";
 
 function ShoeGroup() {
   const { group } = useParams();
 
   console.log(`from the ${group} page`);
-  const { productCollections } = useContext(Product_Context);
+  const productCollections = useSelector((state) => state.products.products)
+
   const [product, setProduct] = useState(productCollections[group]);
   console.log("from shoe group component");
   console.log(productCollections[group]);
